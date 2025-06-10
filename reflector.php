@@ -2,7 +2,7 @@
     <html>
 
 
-        <form style="margin: 20px" action="reflector.php"  method="POST>
+        <form style="margin: 20px" action="reflector.php"  method="POST">
             attr : <input id="attr" type="text">
                      <hr/>
             encode : <input name="encode" type="text">
