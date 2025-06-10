@@ -17,6 +17,7 @@
                         <hr/>
             tag : <input id="tag" type="text">
                         <hr/>
+            <input type="submit">
         </form>
     </html>
 <?php
