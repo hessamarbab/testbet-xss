@@ -2,22 +2,22 @@
     <html>
 
 
-        <form style="margin: 20px" action="#">
+        <form style="margin: 20px" action="reflector.php"  method="POST>
             attr : <input id="attr" type="text">
                      <hr/>
-            encode : <input id="encode" type="text">
+            encode : <input name="encode" type="text">
                         <hr/>
-            trim : <input id="trim" type="text">
+            trim : <input name="trim" type="text">
                         <hr/>
-            ignoreHTML : <input id="ignoreHTML" type="text">
+            ignoreHTML : <input name="ignoreHTML" type="text">
                         <hr/>
-            ignoreQoutScript : <input id="ignoreQoutScript" type="text">
+            ignoreQoutScript : <input name="ignoreQoutScript" type="text">
                         <hr/>
-            ignoreScript : <input id="ignoreScript" type="text">
+            ignoreScript : <input name="ignoreScript" type="text">
                         <hr/>
-            tag : <input id="tag" type="text">
+            tag : <input name="tag" type="text">
                         <hr/>
-            <input type="submit">
+            <input type="submit" value="sub">
         </form>
     </html>
 <?php
