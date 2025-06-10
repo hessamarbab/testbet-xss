@@ -21,7 +21,7 @@
             <hr/>
         </form>
 <?php
-    echo $_POST['attr'] ? "<input value=\"{$_POST['attr']}\">" : "";
+    echo $_POST['attr'] ? "<input value='{$_POST['attr']}'>" : "";
     $encoded = urlencode($_POST['encode']);
     echo $_POST['encode'] ? "<input  value=\"$encoded\">" : "";
     $trimed = trim($_POST['trim'], "\"");
