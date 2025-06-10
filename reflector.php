@@ -1,4 +1,11 @@
+<?php
+    $headers = getallheaders();
+    if($headers["Mooji"] !== "hessam") {
+        throw new Exception('Nooooooooooooooo!');
+    }
+?>
 <!DOCTYPE html>
+
     <html>
 
 
@@ -21,23 +28,23 @@
             <hr/>
         </form>
 <?php
-    echo $_POST['attr'] ? "<input value='{$_POST['attr']}'>" : "";
-    $encoded = urlencode($_POST['encode']);
-    echo $_POST['encode'] ? "<input  value=\"$encoded\">" : "";
-    $trimed = trim($_POST['trim'], "\"");
+    echo $_REQUEST['attr'] ? "<input value='{$_REQUEST['attr']}'>" : "";
+    $encoded = urlencode($_REQUEST['encode']);
+    echo $_REQUEST['encode'] ? "<input  value=\"$encoded\">" : "";
+    $trimed = trim($_REQUEST['trim'], "\"");
     $decoded = urldecode($trimed);
-    echo $_POST['trim'] ? "<input  value=\"$decoded\">" : "";
+    echo $_REQUEST['trim'] ? "<input  value=\"$decoded\">" : "";
 
-    $ignored = str_replace('"', '\\"', $_POST['ignoreHTML']);
-    echo $_POST['ignoreHTML'] ? "<input  value=\"$ignored\">" : "";
+    $ignored = str_replace('"', '\\"', $_REQUEST['ignoreHTML']);
+    echo $_REQUEST['ignoreHTML'] ? "<input  value=\"$ignored\">" : "";
 
-    $ignoredQout = str_replace('"', '\\"', $_POST['ignoreQoutScript']);
-    echo $_POST['ignoreQoutScript'] ? "<script>var asghar = \"$ignoredQout\"</script>" : "";
+    $ignoredQout = str_replace('"', '\\"', $_REQUEST['ignoreQoutScript']);
+    echo $_REQUEST['ignoreQoutScript'] ? "<script>var asghar = \"$ignoredQout\"</script>" : "";
 
-    $ignoreds = str_replace(['\\','"'], ['\\\\', '\\"'], $_POST['ignoreScript']);
-    echo $_POST['ignoreScript'] ? "<script>var asghar = \"$ignoreds\"</script>" : "";
+    $ignoreds = str_replace(['\\','"'], ['\\\\', '\\"'], $_REQUEST['ignoreScript']);
+    echo $_REQUEST['ignoreScript'] ? "<script>var asghar = \"$ignoreds\"</script>" : "";
 
-    echo $_POST['tag'] ? "<div>{$_POST['tag']}</div>" : "";
+    echo $_REQUEST['tag'] ? "<div>{$_REQUEST['tag']}</div>" : "";
 
 
 ?>
